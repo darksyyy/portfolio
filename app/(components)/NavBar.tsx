@@ -28,4 +28,4 @@ export default function NavBar()
             <hr className="h-px text-background-800"/>
         </div>
     );
-}s
+}

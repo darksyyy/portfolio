@@ -1,8 +1,30 @@
 export default function ResumePage()
 {
+  const skills = [
+    "Application Development",
+    "C#",
+    "SQL",
+    "APIs",
+    "Visual Studio",
+    "Analysis skills",
+    "Python",
+    "Linux",
+    "Test-driven development",
+    "Software development",
+    "Java",
+    "Agile",
+    "JavaScript",
+    "HTML5",
+    "Git",
+    "NumPy",
+    "Data structures",
+  ];  
+
+  const skillsLength = skills.length;
+
   return (
-    <div className="grid grid-cols-4">
-      <div className="col-start-2 col-span-2 space-y-2 mt-2 bg-background-800 px-5 py-5 rounded-t-xl">
+    <div className="grid grid-cols-3 mx-10">
+      <div className="col-start-1 col-span-2 space-y-2 mt-2 bg-background-800 px-5 py-5 rounded-t-xl">
         <div className="px-5 grid grid-cols-2">
           <div id="header" className="col-start-1 w-3/4 flex flex-col items-start">
               <span>3157 Hamlet Drive</span>
@@ -11,7 +33,7 @@ export default function ResumePage()
               <span>shaw.darcy.m@gmail.com</span>
           </div>
           <div className="flex justify-end col-start-2 items-center">
-            <button className="text-2xl bg-primary-400 rounded-lg w-32 h-10 hover:scale-110 hover:bg-secondary-400 transition-all">Contact Me</button>
+            <button className="text-2xl bg-primary-500 rounded-lg w-32 h-10 hover:scale-110 hover:bg-secondary-400 transition-all">Contact Me</button>
           </div>
         </div>
         <hr className="h-px text-background-800"/>
@@ -41,6 +63,28 @@ export default function ResumePage()
               <li>Devised alert configurations for a Prometheus-based monitoring system, enhancing the system's responsiveness to potential issues and improving overall system reliability.</li>
               <li>Designed intuitive and visually engaging dashboards using Grafana for effective data visualization, aiding in the decision-making process.</li>
             </ul>       
+          </div>
+        </div>
+      </div>
+      <div className="col-start-3 flex flex-col px-5 mt-2 space-y-5">
+        <div className="bg-background-800 rounded-xl px-5 py-5">
+          <div className="flex flex-col space-y-2 bg-background-700 rounded-xl px-5 py-5">
+            <span className="font-bold text-lg">Education</span>
+            <hr className="h-px text-background-800"/>
+            <span className="">B.S Software Engineering</span>
+            <span className="indent-1 text-sm">Pennsylvania State University, June 2025</span>
+          </div>
+        </div>
+        <div className="rounded-xl px-10 py-5">
+          <span className="font-bold text-lg">Skills</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 space-x-2 space-y-2">
+            {
+              skills.map((skill) => (
+                <div className="flex items-center bg-background-700 rounded-xl w-32 h-20 text-center justify-center">
+                  <span>{skill}</span>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
